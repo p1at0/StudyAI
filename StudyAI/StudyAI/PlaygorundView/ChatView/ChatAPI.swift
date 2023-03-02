@@ -14,7 +14,7 @@ class APIServiceManager {
     let baseUrl = "https://api.openai.com/v1/"
     
     func sendMessage(message: String) -> AnyPublisher<ModelResponse, Error>{
-        let model = Model(model: "CHOOSE MODEL AND PASTE HERE", prompt: message, temperature: 0.7, max_tokens: 2048)
+        let model = Model(model: "text-davinci-003", prompt: message, temperature: 0.7, max_tokens: 2048)
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(Constants.API_KEY)"
         ]
